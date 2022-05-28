@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Reco > formulario de contacto</title>
+  <link href="../css/contacto-style.css" rel="stylesheet" type="text/css" />
+</head>
+  
+<body>
+
+<form action="show_data.html" method="get" name="formulario">
+<!--
+  <form action="show_data.html" target="_blank" method="get" name="formulario">
+  -->
+  <p><label for="nombre">Nombre: </label>
+    <input type="text" name="nombre1" id="nombre" maxlength="100" >
+<!-- ingresa nombre -->
+  
+    <p><label for="apellido">Apellido: </label>
+    <input type="text" name="apellido" id="apellido" maxlength="100">
+  <!-- ingresa apellido -->
+
+    <p><label for="mail">Correo Electronico: </label>
+    <input type="email" name="correo" id="mail" >
+  <!-- ingresa correo -->
+
+    <p><label for="telfn">Telefono: </label>
+    <input type="text" placeholder="(area sin el 0) sin el 15 " name="telefono" id="telfn" >
+  <!-- ingresa telefono -->
+
+      <p><label for="asunto">Asunto: </label>
+    <input type="text" placeholder="ingresa brevemente el asunto" name="asunto" id="asunto" >
+  <!-- ingresa asunto -->
+
+
+        <p><label for="mensaje">Detalle: </label>
+    <textarea name="detalle" rows="5" cols="60" id="mensaje"></textarea> <br>
+<input type="submit" value="Enviar" onclick="validar()" id="btn" name="btn">
+  <input type="reset" value="Borrar">
+  <!-- ingresa detalle del mensaje / boton enviar / borrar-->
+  
+<!-- coment -->
+</form>
+
+<script>
+  (  function()
+  {
+    var formulario = document.getElementsByName('formulario')[0],
+    elementos = formulario.elements,
+    boton = document.getElementById('btn');
+
+    var validarNombre = function(e)
+      {
+        if(formulario.nombre1.value == 0)
+          {
+            alert("Ingrese su nombre");
+            e.preventDefault();
+          }
+      }
+//nombre
+    
+    var validarApellido = function(e)
+            {
+        if(formulario.apellido.value == 0)
+          {
+            alert("Ingrese su apellido");
+            e.preventDefault();
+          }
+      }
+//apellido
+
+
+
+      var validarAsunto = function(e)
+            {
+        if(formulario.asunto.value == 0)
+          {
+            alert("Ingrese brevemente el asunto");
+            e.preventDefault();
+          }
+      }
+//asunto
+
+
+      var validarDetalle = function(e)
+            {
+        if(formulario.detalle.value == 0)
+          {
+            alert("Ingrese el detalle por el cual te contáctas");
+            e.preventDefault();
+          }
+      }
+//detalle
+      
+    var validar = function(e)
+      {
+        validarNombre(e);
+        validarApellido(e);
+        validarAsunto(e);
+        validarDetalle(e);
+
+      };
+    // esto chequea si todos los campos de argumento ehan dado resultado diferente a 0(cero)
+
+formulario.addEventListener("submit", validar);
+      
+  }()
+    
+  
+  )
+</script>
+  
+</body>
+
+<footer>
+</footer>
+
+</html>

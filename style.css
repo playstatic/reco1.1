@@ -1,0 +1,973 @@
+@media screen and (min-width: 100px) and (max-width: 550px)
+{
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Square+Peg&display=swap');
+/*fuentes de google*/
+
+*
+{
+margin:0;
+padding:0;
+
+
+
+font-family: 'Dosis', sans-serif;
+/*font-family: 'Roboto', sans-serif;*/
+
+}
+/* dimos estilo general */
+
+body
+{
+  width:90%;
+  margin:10px auto;
+/*  background: antiquewhite; */
+background: blueviolet;
+  color:antiquewhite;
+  
+  display:grid;
+  grid-gap:10px;
+  /*
+  grid-template-columns:repeat(6 , 1fr);
+  grid-template-rows:repeat(6, auto);
+*/
+  grid-template-areas:
+    'header header header header header header'
+    '. . lo lo . .'
+
+    '. . reco1 reco2 . .'
+
+    '. . preg preg . .'
+    
+    '. . bu bu . .'
+    '. . filt filt . .'
+
+    '. . . . . .'
+    'cr cr cr cr cr cr'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+
+    'foo foo foo foo foo foo'
+  ;
+  
+}
+
+a
+{
+  text-decoration:none;
+}
+/*todos los enlaces NO se subrayaran*
+
+/**/
+header
+{
+  grid-area:header;
+  align-items:center;
+  justify-content:center;
+  text-align:right; /*coloca a la derecha los botones ingresar / registrar*/
+  background-color: rgba(0,0,0, .5);
+
+  position: fixed;
+  width:90%;
+  margin: 0rem auto 0rem ;
+
+}
+
+.registrarse, .ingresar
+  {
+    display: inline-grid;
+    margin:0rem 0.5rem 0rem 0.5rem;
+    padding: 0.5rem 0.9rem;
+    font-weight: bold;
+  }
+.ingresar
+{
+  background-color:#9999ff;
+  color:white;
+}
+.registrarse
+{
+  color:#9999ff;
+}
+ 
+
+.section-logo
+{
+  display:grid;
+  grid-area:lo;
+
+ margin: 2rem auto 0 auto;         padding:auto;
+
+  place-items:center;
+}
+
+.h1-logo
+{
+  display:grid;
+  
+  background-color: #ff66f2;
+  color: black;
+  box-shadow:0.2rem 0.2rem 0.5rem rgba(0,0,0, 0.3);
+  /* sombra logo*/
+  border-radius:50%;
+
+  width:6rem;
+  height:6rem;
+  
+  place-items: center;
+
+font-family: 'Quicksand', sans-serif;  font-size:1.5rem; 
+  font-weight: 400;
+
+  animation-name: animacion-circular-cuadrado;
+  animation-delay:5s;
+  animation-duration:2s;
+  animation-iteration-count:2;
+  animation-direction:alternate;
+ }
+
+@keyframes animacion-circular-cuadrado
+{
+  0%
+  {
+  background-color: #ff66f2;
+  border-radius:50%;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:0;
+  }
+  100%
+  {
+  background-color: #ff66f2;
+  border-radius:2%;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:10s;
+  }
+}
+
+
+.reco1
+{
+  display:grid;
+  grid-area:reco1;
+
+  border-style:solid;
+  border-width:0.10rem;
+  border-color: #00ffff;
+  
+  /*width:1fr;*/
+  width: 9rem;
+  height:2em;
+
+  place-items:center;
+}
+.reco1:hover
+{
+  background-color: #00ffff;
+  color:#000000;
+}
+
+.reco2
+{
+  display:grid;
+  grid-area:reco2;
+
+  border-style:solid;
+  border-width:0.10rem;
+  border-color:#9999ff;
+
+  /*width:1fr;*/
+  width: 6rem;
+  height:2em;
+
+  place-items:center;
+  
+}
+.reco2:hover
+{
+  background-color: #9999ff;
+  color:#fff;
+}
+
+.preg
+{
+  grid-area:preg;
+} 
+
+.buscador
+{
+  grid-area:bu;
+  background-color:#65cae8;
+}
+
+.filtrar
+{
+  grid-area:filt;
+  background-color:#38bce0;
+  color: #000;
+}
+
+
+.contenedor-resultados
+{
+  display:grid;
+  grid-area:cr;
+
+  border-style:solid;
+  border-width:0.10em;
+  border-color:#dbdbdb;
+  border-radius:0.50em
+}
+/*sector reultados de busqueda*/
+
+
+.img-previsualizacion
+{
+  width:4rem;
+  height:4rem;
+}
+/* imagen previsualizada de los resultados*/
+
+
+
+.img-resultado
+{
+  width:100%;
+  height:70%;
+}
+/*esta imagen pertenece al item resultado, ya abierto*/
+
+.localizacion
+{
+  width:auto;
+  height:auto;
+}
+/* item ya abierto */
+
+
+footer
+{
+  grid-area:foo;
+  
+  background-color: rgba(0,0,0, .5);
+  color: #fff;
+  font-size:0.9rem;
+
+  padding:0.5rem;
+}
+
+.fa-square-envelope
+{
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+}
+/*esta imagen pertenece al item resultado, ya abierto*/
+
+.localizacion
+{
+  width:auto;
+  height:auto;
+}
+/* item ya abierto */
+
+
+footer
+{
+  grid-area:foo;
+    
+  background-color: rgba(0,0,0, .5);
+  color: #fff;
+  font-size:0.9rem;
+  
+  padding:0.5rem;
+}
+  
+}/*final Query smarthphone*/
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 550px) and (max-width: 900px)
+{
+  
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Square+Peg&display=swap');
+/*fuentes de google*/
+
+*
+{
+margin:0;
+padding:0;
+
+
+
+font-family: 'Dosis', sans-serif;
+/*font-family: 'Roboto', sans-serif;*/
+
+}
+/* dimos estilo general */
+
+body
+{
+  width:90%;
+  margin:10px auto;
+
+/*  background: antiquewhite; */
+background: lightpink;
+  
+  display:grid;
+  grid-gap:10px;
+  /*
+  grid-template-columns:repeat(6 , 1fr);
+  grid-template-rows:repeat(6, auto);
+*/
+  grid-template-areas:
+    'header header header header header header'
+    '. . lo lo . .'
+
+    '. . reco1 reco2 . .'
+
+    '. . preg preg . .'
+    
+    '. . bu filt . .'
+
+    '. . . . . .'
+    'cr cr cr cr cr cr'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+
+    'foo foo foo foo foo foo'
+  ;
+  
+}
+
+a
+{
+  text-decoration:none;
+}
+/*todos los enlaces NO se subrayaran*
+
+/**/
+header
+{
+  grid-area:header;
+  align-items:center;
+  justify-content:center;
+  text-align:right; /*coloca a la derecha los botones ingresar / registrar*/
+  background-color: rgba(0,0,0, .5);
+
+  position: fixed;
+  width:90%;
+  margin: 0rem auto 0rem ;
+
+}
+
+.registrarse, .ingresar
+  {
+    display: inline-grid;
+    margin:0rem 0.5rem 0rem 0.5rem;
+    padding: 0.5rem 0.9rem;
+    font-weight: bold;
+  }
+.ingresar
+{
+  background-color:#9999ff;
+  color:white;
+}
+.registrarse
+{
+  color:#9999ff;
+}
+ 
+
+.section-logo
+{
+  display:grid;
+  grid-area:lo;
+
+ margin: 2rem auto 0 auto;         padding:auto;
+
+  place-items:center;
+}
+
+.h1-logo
+{
+  display:grid;
+  
+  background-color: #ff66f2;
+  box-shadow:0.2rem 0.2rem 0.5rem rgba(0,0,0, 0.3);
+  /* sombra logo*/
+  border-radius:50%;
+
+  width:6rem;
+  height:6rem;
+  
+  place-items: center;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.5rem; 
+  font-weight: 400;
+
+  animation-name: animacion-circular-cuadrado;
+  animation-delay:5s;
+  animation-duration:2s;
+  animation-iteration-count:2;
+  animation-direction:alternate;
+ }
+
+@keyframes animacion-circular-cuadrado
+{
+  0%
+  {
+  background-color: #ff66f2;
+  border-radius:50%;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:0;
+  }
+  100%
+  {
+  background-color: #ff66f2;
+  border-radius:2%;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:10s;
+  }
+}
+
+
+.reco1
+{
+  display:grid;
+  grid-area:reco1;
+
+  border-style:solid;
+  border-width:0.10rem;
+  border-color: #00ffff;
+  
+  width:1fr;
+  height:2em;
+
+  place-items:center;
+}
+.reco1:hover
+{
+  background-color: #00ffff;
+  color:#000000;
+}
+
+.reco2
+{
+  display:grid;
+  grid-area:reco2;
+
+  border-style:solid;
+  border-width:0.10rem;
+  border-color:#9999ff;
+
+  height:2em;
+
+  place-items:center;
+  
+}
+.reco2:hover
+{
+  background-color: #9999ff;
+  color:#fff;
+}
+
+.preg
+{
+  grid-area:preg;
+} 
+
+.buscador
+{
+  grid-area:bu;
+  background-color:#65cae8;
+}
+
+.filtrar
+{
+  grid-area:filt;
+  background-color:#38bce0;
+}
+
+
+.contenedor-resultados
+{
+  display:grid;
+  grid-area:cr;
+
+  border-style:solid;
+  border-width:0.10em;
+  border-color:#dbdbdb;
+  border-radius:0.50em
+}
+/*sector reultados de busqueda*/
+
+
+.img-previsualizacion
+{
+  width:4rem;
+  height:4rem;
+}
+/* imagen previsualizada de los resultados*/
+
+
+
+.img-resultado
+{
+  width:100%;
+  height:70%;
+}
+/*esta imagen pertenece al item resultado, ya abierto*/
+
+.localizacion
+{
+  width:auto;
+  height:auto;
+}
+/* item ya abierto */
+
+
+footer
+{
+  grid-area:foo;
+  
+  background-color: rgba(0,0,0, .5);
+  color: #fff;
+  font-size:0.9rem;
+
+  padding:0.5rem;
+}
+
+.fa-square-envelope
+{
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+}
+/*esta imagen pertenece al item resultado, ya abierto*/
+
+.localizacion
+{
+  width:auto;
+  height:auto;
+}
+/* item ya abierto */
+
+
+footer
+{
+  grid-area:foo;
+    
+  background-color: rgba(0,0,0, .5);
+  color: #fff;
+  font-size:0.9rem;
+  
+  padding:0.5rem;
+}
+  
+}/*final Query tablet*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 900px) 
+{
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&family=Square+Peg&display=swap');
+/*fuentes de google*/
+
+*
+{
+margin:0;
+padding:0;
+
+
+
+font-family: 'Dosis', sans-serif;
+/*font-family: 'Roboto', sans-serif;*/
+
+}
+/* dimos estilo general */
+
+body
+{
+  width:90%;
+  margin:10px auto;
+
+  background: antiquewhite;
+  
+  display:grid;
+  grid-gap:10px;
+  /*
+  grid-template-columns:repeat(6 , 1fr);
+  grid-template-rows:repeat(6, auto);
+*/
+  grid-template-areas:
+    'header header header header header header'
+    '. . lo lo . .'
+
+    '. . reco1 reco2 . .'
+
+    '. . preg preg . .'
+    
+    '. . bu filt . .'
+
+    '. . . . . .'
+    'cr cr cr cr cr cr'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+    '. . . . . .'
+
+    'foo foo foo foo foo foo'
+  ;
+  
+}
+
+a
+{
+  text-decoration:none;
+}
+/*todos los enlaces NO se subrayaran*
+
+/**/
+header
+{
+  grid-area:header;
+  align-items:center;
+  justify-content:center;
+  text-align:right; /*coloca a la derecha los botones ingresar / registrar*/
+  background-color: rgba(0,0,0, .5);
+
+  position: fixed;
+  width:90%;
+  margin: 0rem auto 0rem ;
+
+}
+
+.registrarse, .ingresar
+  {
+    display: inline-grid;
+    margin:0rem 0.5rem 0rem 0.5rem;
+    padding: 0.5rem 0.9rem;
+    font-weight: bold;
+  }
+.ingresar
+{
+  background-color:#9999ff;
+  color:white;
+}
+.registrarse
+{
+  color:#9999ff;
+}
+ 
+
+.section-logo
+{
+  display:grid;
+  grid-area:lo;
+
+ margin: 2rem auto 0 auto;         padding:auto;
+
+  place-items:center;
+}
+
+.h1-logo
+{
+  display:grid;
+  
+  background-color: #ff66f2;
+  box-shadow:0.2rem 0.2rem 0.5rem rgba(0,0,0, 0.3);
+  /* sombra logo*/
+  border-radius:50%;
+
+  width:6rem;
+  height:6rem;
+  
+  place-items: center;
+
+  font-family: 'Quicksand', sans-serif;
+  font-size:1.5rem; 
+  font-weight: 400;
+
+  animation-name: animacion-circular-cuadrado;
+  animation-delay:5s;
+  animation-duration:2s;
+  animation-iteration-count:2;
+  animation-direction:alternate;
+ }
+
+@keyframes animacion-circular-cuadrado
+{
+  0%
+  {
+  background-color: #ff66f2;
+  border-radius:50%;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:0;
+  }
+  100%
+  {
+  background-color: #ff66f2;
+  border-radius:2%;
+  animation-duration:1s;
+  animation-timing-function:linear;
+  animation-delay:10s;
+  }
+}
+
+
+.reco1
+{
+  display:grid;
+  grid-area:reco1;
+
+  border-style:solid;
+  border-width:0.10rem;
+  border-color: #00ffff;
+  
+  width:1fr;
+  height:2em;
+
+  place-items:center;
+}
+.reco1:hover
+{
+  background-color: #00ffff;
+  color:#000000;
+}
+
+.reco2
+{
+  display:grid;
+  grid-area:reco2;
+
+  border-style:solid;
+  border-width:0.10rem;
+  border-color:#9999ff;
+
+  height:2em;
+
+  place-items:center;
+  
+}
+.reco2:hover
+{
+  background-color: #9999ff;
+  color:#fff;
+}
+
+.preg
+{
+  grid-area:preg;
+} 
+
+.buscador
+{
+  grid-area:bu;
+  background-color:#65cae8;
+}
+
+.filtrar
+{
+  grid-area:filt;
+  background-color:#38bce0;
+}
+
+
+.contenedor-resultados
+{
+  display:grid;
+  grid-area:cr;
+
+  border-style:solid;
+  border-width:0.10em;
+  border-color:#dbdbdb;
+  border-radius:0.50em
+}
+/*sector reultados de busqueda*/
+
+
+.img-previsualizacion
+{
+  width:4rem;
+  height:4rem;
+}
+/* imagen previsualizada de los resultados*/
+
+
+
+.img-resultado
+{
+  width:100%;
+  height:70%;
+}
+/*esta imagen pertenece al item resultado, ya abierto*/
+
+.localizacion
+{
+  width:auto;
+  height:auto;
+}
+/* item ya abierto */
+
+
+footer
+{
+  grid-area:foo;
+  
+  background-color: rgba(0,0,0, .5);
+  color: #fff;
+  font-size:0.9rem;
+
+  padding:0.5rem;
+}
+
+.fa-square-envelope
+{
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+
+}
+/*esta imagen pertenece al item resultado, ya abierto*/
+
+.localizacion
+{
+  width:auto;
+  height:auto;
+}
+/* item ya abierto */
+
+
+footer
+{
+  grid-area:foo;
+    
+  background-color: rgba(0,0,0, .5);
+  color: #fff;
+  font-size:0.9rem;
+  
+  padding:0.5rem;
+}
+  
+}/*final Query pc o pantalla grandes*/

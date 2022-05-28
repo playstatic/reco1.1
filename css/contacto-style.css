@@ -1,0 +1,44 @@
+*
+{
+  margin:0;
+  padding:0;
+  width:100%;
+  height: auto;
+}
+
+
+body
+{
+  display:grid;
+    grid-template-areas:
+    '. form .'
+  
+    ;
+        
+  background-color:gray;
+
+  grid-gap: 1rem;
+  align-items:center; 
+  justify-content:center;
+
+  width: 100%;
+  height: auto;
+  padding:auto;
+
+  font-size:1rem;
+}
+
+form
+{
+  width:90%;
+  
+  margin: auto;
+  padding:1rem;
+
+  grid-area:form;
+
+  background-color:salmon;
+  border-radius:0.5rem;
+
+
+}
